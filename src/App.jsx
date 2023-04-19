@@ -4,8 +4,12 @@ import { Botones } from "./components/Botones";
 import { BarraValor } from "./components/BarraValor";
 
 export function App() {
-  const [contador, setContador] = useState()
-  const [barra, setBarra] = useState()
+  const [contador, setContador] = useState(0)
+
+  if(contador === ""){
+    alert("¡No se puede dejar el contador sin valor!")
+    setContador(0)
+  }
 
   const sumar = () => {
     setContador(contador + 1)
